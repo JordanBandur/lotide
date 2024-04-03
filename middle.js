@@ -21,7 +21,7 @@ const eqArrays = function(arr1, arr2) {
 const middle = function(arr) {
   let midArray = [];
   let index;
-  if (arr.length < 3 || arr.length === 0) {
+  if (arr.length < 3) {
     return midArray;
   } else {
     if (arr.length % 2 !== 0) {
@@ -30,8 +30,7 @@ const middle = function(arr) {
       return midArray;
     } else {
       index = ((arr.length / 2) - 1);
-      midArray.push(arr[index]);
-      midArray.push(arr[index + 1]);
+      midArray.push(arr[index], arr[index + 1]);
       return midArray;
     }
   }
