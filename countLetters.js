@@ -8,7 +8,8 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(sentence) {
   const countObj = {};
-  for (let letter of sentence.replace(/ /g,'')) { // regex for removing spaces in the sentence
+  const trimmedSentence = sentence.replace(/ /g,''); // regex for removing spaces in the sentence
+  for (let letter of trimmedSentence) {
     if (countObj[letter]) {
       countObj[letter] += 1;
     } else {
