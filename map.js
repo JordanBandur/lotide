@@ -19,6 +19,10 @@ const eqArrays = function (arr1, arr2) {
 };
 
 const map = function (array, callback) {
+  if (typeof callback !== 'function') {
+    console.log('Error: callback is not a function');
+    return;
+  }
   const results = [];
   for (let item of array) {
     results.push(callback(item));
